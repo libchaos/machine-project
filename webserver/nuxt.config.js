@@ -14,13 +14,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Global CSS
-  */
-  css: ['~static/css/main.css'],
-  /*
-  ** Customize the progress-bar color
-  */
+
   loading: { color: '#3B8070' },
   build: {
     /*
@@ -43,5 +37,14 @@ module.exports = {
         plugins: ['vux-ui']
       })
     }
-  }
+  },
+  plugins: ['~plugins/iview'],
+
+    /*
+    ** Global CSS
+    */
+  css: ['~static/css/main.css', 'iview/dist/styles/iview.css']
+    /*
+    ** Customize the progress-bar color
+    */
 }
