@@ -16,6 +16,7 @@
 
 <script>
     import axios from 'axios'
+    
     import NuxtLink from '../.nuxt/components/nuxt-link'
     export default {
         components: {NuxtLink},

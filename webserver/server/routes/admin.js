@@ -1,4 +1,5 @@
 import api from '../api'
+import rpc from '../rpc_client'
 import {controller, get, post, required} from '../decorator/route'
 
 @controller('/admin')
@@ -25,13 +26,15 @@ export class adminController {
         nickname: user.nickname,
         avatarUrl: user.avatarUrl
       }
+      const rpcData = await rpc('add', [1, 2])
       return (ctx.body = {
         success: true,
         user: {
           email: user.email,
           nickname: user.nickname,
           avatarUrl: user.avatarUrl
-        }
+        },
+        rpcData
       })
     }
     return (ctx.body = {
