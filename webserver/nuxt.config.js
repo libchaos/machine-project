@@ -1,3 +1,4 @@
+const vuxLoader = require('vux-loader')
 module.exports = {
   /*
   ** Headers of the page
@@ -20,5 +21,27 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' }
+  loading: { color: '#3B8070' },
+  build: {
+    /*
+     ** Run ESLINT on save  关掉了eslint
+     */
+    extend (config, ctx) {
+      if (ctx.dev && ctx.isClient) {
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
+      }
+      vuxLoader.merge(config, {
+        // options: {
+        //   isWebpack2: true
+        // },
+
+        plugins: ['vux-ui']
+      })
+    }
+  }
 }
