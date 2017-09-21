@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+SimpleService	../rpc_server.py	/^class SimpleService(jrpc.service.SocketObject):$/;"	kind:class	line:6
+client.py	../client.py	1;"	kind:file	line:1
+echo	../rpc_server.py	/^    def echo(self, msg):$/;"	kind:member	line:8
+jrpc	../client.py	/^import jrpc$/;"	kind:namespace	line:4
+jrpc	../rpc_server.py	/^import jrpc$/;"	kind:namespace	line:4
+rpc_server.py	../rpc_server.py	1;"	kind:file	line:1
+server	../client.py	/^server = None$/;"	kind:variable	line:5
+server	../client.py	/^server = jrpc.service.SocketProxy(4000)$/;"	kind:variable	line:6
+server	../rpc_server.py	/^server = SimpleService(4000)$/;"	kind:variable	line:11
