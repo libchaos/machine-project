@@ -4,12 +4,15 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-SimpleService	../rpc_server.py	/^class SimpleService(jrpc.service.SocketObject):$/;"	kind:class	line:6
+JSONRPCResponseManager	../rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
+Request	../rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+Response	../rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+application	../rpc_server.py	/^def application(request):$/;"	kind:function	line:13
 client.py	../client.py	1;"	kind:file	line:1
-echo	../rpc_server.py	/^    def echo(self, msg):$/;"	kind:member	line:8
-jrpc	../client.py	/^import jrpc$/;"	kind:namespace	line:4
-jrpc	../rpc_server.py	/^import jrpc$/;"	kind:namespace	line:4
+dispatcher	../rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
+foobar	../rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
+json	../client.py	/^import json$/;"	kind:namespace	line:5
+main	../client.py	/^def main():$/;"	kind:function	line:8
+requests	../client.py	/^import requests$/;"	kind:namespace	line:4
 rpc_server.py	../rpc_server.py	1;"	kind:file	line:1
-server	../client.py	/^server = None$/;"	kind:variable	line:5
-server	../client.py	/^server = jrpc.service.SocketProxy(4000)$/;"	kind:variable	line:6
-server	../rpc_server.py	/^server = SimpleService(4000)$/;"	kind:variable	line:11
+run_simple	../rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2

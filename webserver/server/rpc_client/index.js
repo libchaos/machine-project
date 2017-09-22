@@ -1,7 +1,7 @@
 import jayson from 'jayson'
 
 const client = jayson.client.http({
-  port: 4000,
+  port: 4040,
   hostname: 'localhost'
 })
 
