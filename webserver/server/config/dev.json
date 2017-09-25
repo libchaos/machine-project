@@ -3,9 +3,9 @@
   "base": "http://127.0.0.1:3000",
   "SITE_ROOT_URL": "http://codingdream.ngrok.cc",
   "wechat": {
-    "appID": "wxe9e2ec8d631c277d",
-    "appSecret": "ebacae6574a8aa091684c937edf6f48d",
-    "token": "excerlentforlearing"
+    "appID": "wxd81b701d8b4a2ebd",
+    "appSecret": "d4624c36b6795d1d99dcf0547af5443d",
+    "token": "G4TT9jG3Y3S3pK4rBMxuCHFg"
   },
   "mina": {
     "appid": "wxcac851ec7e9550e2",

@@ -1,4 +1,4 @@
-const vuxLoader = require('vux-loader')
+// const vuxLoader = require('vux-loader')
 module.exports = {
   /*
   ** Headers of the page
@@ -11,40 +11,45 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
 
   loading: { color: '#3B8070' },
-  build: {
-    /*
-     ** Run ESLINT on save  关掉了eslint
-     */
-    extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
-        // config.module.rules.push({
-        //   enforce: 'pre',
-        //   test: /\.(js|vue)$/,
-        //   loader: 'eslint-loader',
-        //   exclude: /(node_modules)/
-        // })
-      }
-      vuxLoader.merge(config, {
-        // options: {
-        //   isWebpack2: true
-        // },
+  // build: {
+  //   /*
+  //    ** Run ESLINT on save  关掉了eslint
+  //    */
+  //   extend (config, ctx) {
+  //     if (ctx.dev && ctx.isClient) {
+  //       // config.module.rules.push({
+  //       //   enforce: 'pre',
+  //       //   test: /\.(js|vue)$/,
+  //       //   loader: 'eslint-loader',
+  //       //   exclude: /(node_modules)/
+  //       // })
+  //     }
+  //     vuxLoader.merge(config, {
+  //       // options: {
+  //       //   isWebpack2: true
+  //       // },
 
-        plugins: ['vux-ui']
-      })
-    }
-  },
-  plugins: ['~plugins/iview'],
+  //       plugins: ['vux-ui']
+  //     })
+  //   }
+  // },
+  plugins: ['~plugins/vuetify'],
 
     /*
     ** Global CSS
     */
-  css: ['~static/css/main.css', 'iview/dist/styles/iview.css']
+  css: [ '~/static/style/app.styl' ],
     /*
     ** Customize the progress-bar color
     */
+  build: {
+    vendor: ['vuetify'],
+    extractCSS: true
+  }
 }
