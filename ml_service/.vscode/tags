@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ChineseAnalyzer	../analyse/analyzer.py	/^def ChineseAnalyzer(stoplist=STOP_WORDS,minsize=1,stemfn=stem,cachesize=50000):$/;"	kind:function	line:34
+ChineseAnalyzer	../buildSeg.py	/^from analyse.analyzer import ChineseAnalyzer$/;"	kind:namespace	line:4
+ChineseTokenizer	../analyse/analyzer.py	/^class ChineseTokenizer(Tokenizer):$/;"	kind:class	line:18
+LineSentence	../buildWord2vec.py	/^from gensim.models.word2vec import LineSentence$/;"	kind:namespace	line:10
+LowercaseFilter	../analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+RegexAnalyzer	../analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+STOP_WORDS	../analyse/analyzer.py	/^STOP_WORDS = frozenset((line.rstrip() for line in codecs.open(dataPath,'r','utf-8')))$/;"	kind:variable	line:13
+StemFilter	../analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+StopFilter	../analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+Token	../analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
+Tokenizer	../analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
+WikiCorpus	../buildWord2vec.py	/^from gensim.corpora import WikiCorpus$/;"	kind:namespace	line:8
+Word2Vec	../buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:9
+__call__	../analyse/analyzer.py	/^    def __call__(self,text,**kargs):$/;"	kind:member	line:19
+__init__.py	../__init__.py	1;"	kind:file	line:1
+__init__.py	../analyse/__init__.py	1;"	kind:file	line:1
+accepted_chars	../analyse/analyzer.py	/^accepted_chars = re.compile(r"[\\u4e00-\\u9fa5]+")$/;"	kind:variable	line:15
+analyzer	../buildSeg.py	/^    analyzer = ChineseAnalyzer()$/;"	kind:variable	line:11
+analyzer.py	../analyse/analyzer.py	1;"	kind:file	line:1
+buildSeg.py	../buildSeg.py	1;"	kind:file	line:1
+buildWord2vec.py	../buildWord2vec.py	1;"	kind:file	line:1
+codecs	../analyse/analyzer.py	/^import codecs$/;"	kind:namespace	line:5
+data	../buildSeg.py	/^    data = pandas.read_csv(dataPath('data.csv'))$/;"	kind:variable	line:10
+dataPath	../analyse/analyzer.py	/^dataPath = os.path.join(module_path, 'stop_words.txt')$/;"	kind:variable	line:11
+dataPath	../buildSeg.py	/^    dataPath = lambda filename: os.path.join('..\/data_process\/public', filename)$/;"	kind:variable	line:9
+jieba	../analyse/analyzer.py	/^import jieba$/;"	kind:namespace	line:6
+logger	../buildWord2vec.py	/^    logger = logging.getLogger(program)$/;"	kind:variable	line:14
+logging	../buildSeg.py	/^import logging$/;"	kind:namespace	line:3
+logging	../buildWord2vec.py	/^import logging$/;"	kind:namespace	line:4
+model	../buildWord2vec.py	/^    model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5,$/;"	kind:variable	line:23
+module_path	../analyse/analyzer.py	/^module_path = os.path.dirname(__file__)$/;"	kind:variable	line:10
+multiprocessing	../buildWord2vec.py	/^import multiprocessing$/;"	kind:namespace	line:7
+mycut	../buildSeg.py	/^    mycut = lambda s: [t.text for t in analyzer(s)]$/;"	kind:variable	line:12
+os	../analyse/analyzer.py	/^import os$/;"	kind:namespace	line:8
+os	../buildSeg.py	/^import os$/;"	kind:namespace	line:1
+os	../buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
+pandas	../buildSeg.py	/^import pandas$/;"	kind:namespace	line:2
+path	../buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
+program	../buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:13
+re	../analyse/analyzer.py	/^import re$/;"	kind:namespace	line:7
+space	../buildSeg.py	/^    space = " "$/;"	kind:variable	line:13
+stem	../analyse/analyzer.py	/^from whoosh.lang.porter import stem$/;"	kind:namespace	line:4
+sys	../buildWord2vec.py	/^import sys$/;"	kind:namespace	line:6
+unicode_literals	../analyse/analyzer.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:1
+workers	../buildWord2vec.py	/^            workers=multiprocessing.cpu_count())$/;"	kind:variable	line:24
