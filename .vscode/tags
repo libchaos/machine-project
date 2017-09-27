@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+JSONRPCResponseManager	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
+Request	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+Response	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+application	../backend/rpc_server.py	/^def application(request):$/;"	kind:function	line:13
+client.py	../backend/client.py	1;"	kind:file	line:1
+crawl_wiki.py	../data_fetcher/crawl_wiki.py	1;"	kind:file	line:1
+dispatcher	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
+foobar	../backend/rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
+json	../backend/client.py	/^import json$/;"	kind:namespace	line:5
+main	../backend/client.py	/^def main():$/;"	kind:function	line:8
+requests	../backend/client.py	/^import requests$/;"	kind:namespace	line:4
+rpc_server.py	../backend/rpc_server.py	1;"	kind:file	line:1
+run_simple	../backend/rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2

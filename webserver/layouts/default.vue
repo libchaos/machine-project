@@ -17,26 +17,13 @@
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="item.title" @click.stop="selectedTitle(item.title)"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-  
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>  
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -59,13 +46,21 @@
         drawer: true,
         fixed: false,
         items: [
-          { to: '/', title: '文本分析', icon: 'apps' },
-          { to: '/inspire', title: '查询🐂', icon: 'bubble_chart' }
+          { to: '/text-mine', title: '文本分析', icon: '' },
+          { to: '/knowlege-graph', title: '知识图谱', icon: ''},
+          { to: '/search', title: '搜索', icon: '' },
+          { to: '/qa', title: '问答', icon: ''}
         ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: '人艰不拆'
+        title: '母婴问诊分析挖掘'
+      }
+    },
+    methods: {
+      selectedTitle(titlea) {
+        console.log('title  ', titlea)
+        this.title = titlea
       }
     }
   }

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon -w ./server -w ./start.js --exec node ./start.js",
     "build": "nuxt build",
-    "ngrok": "./server/bin/sunny clientid 0ec2900e67569469",
+    "ngrok": "./server/bin/sunny clientid a3593e0fd4b188ff",
     "start": "cross-env NODE_ENV=production node build/main.js",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
