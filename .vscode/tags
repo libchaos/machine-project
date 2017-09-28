@@ -4,16 +4,67 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+ChineseAnalyzer	../ml_service/analyse/analyzer.py	/^def ChineseAnalyzer(stoplist=STOP_WORDS,minsize=1,stemfn=stem,cachesize=50000):$/;"	kind:function	line:34
+ChineseAnalyzer	../ml_service/buildSeg.py	/^from analyse.analyzer import ChineseAnalyzer$/;"	kind:namespace	line:4
+ChineseTokenizer	../ml_service/analyse/analyzer.py	/^class ChineseTokenizer(Tokenizer):$/;"	kind:class	line:18
 JSONRPCResponseManager	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
+LineSentence	../ml_service/buildWord2vec.py	/^from gensim.models.word2vec import LineSentence$/;"	kind:namespace	line:10
+LowercaseFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+MineDB	../data_fetcher/crawl_wiki.py	/^from pylib.knowledge.datasource import MineDB$/;"	kind:namespace	line:9
+RegexAnalyzer	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
 Request	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
 Response	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+STOP_WORDS	../ml_service/analyse/analyzer.py	/^STOP_WORDS = frozenset((line.rstrip() for line in codecs.open(dataPath,'r','utf-8')))$/;"	kind:variable	line:13
+StemFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+StopFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+Token	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
+Tokenizer	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
+WikiCorpus	../ml_service/buildWord2vec.py	/^from gensim.corpora import WikiCorpus$/;"	kind:namespace	line:8
+Word2Vec	../ml_service/buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:9
+__call__	../ml_service/analyse/analyzer.py	/^    def __call__(self,text,**kargs):$/;"	kind:member	line:19
+__init__.py	../ml_service/analyse/__init__.py	1;"	kind:file	line:1
+accepted_chars	../ml_service/analyse/analyzer.py	/^accepted_chars = re.compile(r"[\\u4e00-\\u9fa5]+")$/;"	kind:variable	line:15
+analyzer	../ml_service/buildSeg.py	/^    analyzer = ChineseAnalyzer()$/;"	kind:variable	line:11
+analyzer.py	../ml_service/analyse/analyzer.py	1;"	kind:file	line:1
 application	../backend/rpc_server.py	/^def application(request):$/;"	kind:function	line:13
+argparse	../data_fetcher/crawl_wiki.py	/^import argparse$/;"	kind:namespace	line:5
+asynio	../data_fetcher/crawl_wiki.py	/^import asynio$/;"	kind:namespace	line:4
+buildSeg.py	../ml_service/buildSeg.py	1;"	kind:file	line:1
+buildWord2vec.py	../ml_service/buildWord2vec.py	1;"	kind:file	line:1
 client.py	../backend/client.py	1;"	kind:file	line:1
+codecs	../ml_service/analyse/analyzer.py	/^import codecs$/;"	kind:namespace	line:5
+colored	../data_fetcher/crawl_wiki.py	/^from termcolor import colored$/;"	kind:namespace	line:7
 crawl_wiki.py	../data_fetcher/crawl_wiki.py	1;"	kind:file	line:1
+data	../ml_service/buildSeg.py	/^    data = pandas.read_csv(dataPath('data.csv'))$/;"	kind:variable	line:10
+dataPath	../ml_service/analyse/analyzer.py	/^dataPath = os.path.join(module_path, 'stop_words.txt')$/;"	kind:variable	line:11
+dataPath	../ml_service/buildSeg.py	/^    dataPath = lambda filename: os.path.join('..\/data_process\/public', filename)$/;"	kind:variable	line:9
 dispatcher	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
 foobar	../backend/rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
+jieba	../ml_service/analyse/analyzer.py	/^import jieba$/;"	kind:namespace	line:6
 json	../backend/client.py	/^import json$/;"	kind:namespace	line:5
+logger	../ml_service/buildWord2vec.py	/^    logger = logging.getLogger(program)$/;"	kind:variable	line:14
+logging	../ml_service/buildSeg.py	/^import logging$/;"	kind:namespace	line:3
+logging	../ml_service/buildWord2vec.py	/^import logging$/;"	kind:namespace	line:4
 main	../backend/client.py	/^def main():$/;"	kind:function	line:8
+model	../ml_service/buildWord2vec.py	/^    model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5,$/;"	kind:variable	line:23
+module_path	../ml_service/analyse/analyzer.py	/^module_path = os.path.dirname(__file__)$/;"	kind:variable	line:10
+multiprocessing	../ml_service/buildWord2vec.py	/^import multiprocessing$/;"	kind:namespace	line:7
+mycut	../ml_service/buildSeg.py	/^    mycut = lambda s: [t.text for t in analyzer(s)]$/;"	kind:variable	line:12
+os	../ml_service/analyse/analyzer.py	/^import os$/;"	kind:namespace	line:8
+os	../ml_service/buildSeg.py	/^import os$/;"	kind:namespace	line:1
+os	../ml_service/buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
+pandas	../ml_service/buildSeg.py	/^import pandas$/;"	kind:namespace	line:2
+path	../ml_service/buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
+program	../ml_service/buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:13
+re	../ml_service/analyse/analyzer.py	/^import re$/;"	kind:namespace	line:7
+reduce	../data_fetcher/crawl_wiki.py	/^from functools import reduce$/;"	kind:namespace	line:6
 requests	../backend/client.py	/^import requests$/;"	kind:namespace	line:4
 rpc_server.py	../backend/rpc_server.py	1;"	kind:file	line:1
 run_simple	../backend/rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2
+space	../ml_service/buildSeg.py	/^    space = " "$/;"	kind:variable	line:13
+stem	../ml_service/analyse/analyzer.py	/^from whoosh.lang.porter import stem$/;"	kind:namespace	line:4
+sys	../data_fetcher/crawl_wiki.py	/^import sys$/;"	kind:namespace	line:3
+sys	../ml_service/buildWord2vec.py	/^import sys$/;"	kind:namespace	line:6
+unicode_literals	../ml_service/analyse/analyzer.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:1
+wiki	../data_fetcher/crawl_wiki.py	/^from pylib.spider import wiki as wiki$/;"	kind:namespace	line:8
+workers	../ml_service/buildWord2vec.py	/^            workers=multiprocessing.cpu_count())$/;"	kind:variable	line:24

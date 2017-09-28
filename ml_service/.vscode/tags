@@ -18,7 +18,6 @@ Tokenizer	../analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$
 WikiCorpus	../buildWord2vec.py	/^from gensim.corpora import WikiCorpus$/;"	kind:namespace	line:8
 Word2Vec	../buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:9
 __call__	../analyse/analyzer.py	/^    def __call__(self,text,**kargs):$/;"	kind:member	line:19
-__init__.py	../__init__.py	1;"	kind:file	line:1
 __init__.py	../analyse/__init__.py	1;"	kind:file	line:1
 accepted_chars	../analyse/analyzer.py	/^accepted_chars = re.compile(r"[\\u4e00-\\u9fa5]+")$/;"	kind:variable	line:15
 analyzer	../buildSeg.py	/^    analyzer = ChineseAnalyzer()$/;"	kind:variable	line:11

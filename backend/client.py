@@ -6,13 +6,13 @@ import json
 
 
 def main():
-    url = "http://localhost:4000/jsonrpc"
+    url = "http://localhost:4040/jsonrpc"
     headers = {'content-type': 'application/json'}
 
     # Example echo method
     payload = {
-        "method": "foobar",
-        "params": {'foo': "a", 'bar': "b"},
+        "method": "predict_simular",
+        "params": ["宝宝"],
         "jsonrpc": "2.0",
         "id": 0,
     }
@@ -21,8 +21,8 @@ def main():
     print(response)
 
     # assert response["result"] == "echome!"
-    assert response["jsonrpc"]
-    assert response["id"] == 0
+    # assert response["jsonrpc"]
+    
 
 if __name__ == "__main__":
     main()
