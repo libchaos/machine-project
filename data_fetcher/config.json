@@ -1,0 +1,78 @@
+{
+  "controls": {
+    "mongodbReadCapacity": 10000,
+    "elasticsearchBulkSize": 5000
+  },
+  "mongodb": {
+    "url": "mongodb://localhost:27017/turing?replicaSet=myDevReplSet",
+    "options": {
+      "readPreference": "secondaryPreferred"
+    }
+  },
+  "elasticsearch": {
+    "options": {
+      "host": "http://localhost:9200",
+      "apiVersion": "5.2"
+    },
+    "indices": [{
+      "index": "turing",
+      "body": {
+        "settings": {
+          "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1,
+            "mapper.dynamic": false
+          }
+        }
+      }
+    }]
+  },
+  "tasks": [{
+    "from": {
+      "phase": "tail",
+      "time": "2015-01-01T10:55:24.474Z"
+    },
+    "extract": {
+      "db": "turing",
+      "collection": "tmc_inquiry_question_chat_log",
+      "query": {},
+      "projection": {
+        "name": 1,
+        "shareCount.all": 1,
+        "deleted": 1
+      }
+    },
+    "transform": {
+      "mapping": {
+        "name": "tmc_inquiry_question_chat_log",
+        "shareCount.all": "shareCount.all",
+        "deleted": "isDeleted"
+      }
+    },
+    "load": {
+      "index": "tmc_inquiry_question_chat_log",
+      "type": "tmc_inquiry_question_chat_log",
+      "body": {
+        "dynamic": false,
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart",
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            }
+          },
+          "shareCount.all": {
+            "type": "long"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }]
+}

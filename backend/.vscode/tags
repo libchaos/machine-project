@@ -11,8 +11,14 @@ application	../rpc_server.py	/^def application(request):$/;"	kind:function	line:
 client.py	../client.py	1;"	kind:file	line:1
 dispatcher	../rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
 foobar	../rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
+gensim	../operations.py	/^import gensim$/;"	kind:namespace	line:1
 json	../client.py	/^import json$/;"	kind:namespace	line:5
 main	../client.py	/^def main():$/;"	kind:function	line:8
+model	../operations.py	/^model = gensim.models.Word2Vec.load('..\/ml_service\/text.model')$/;"	kind:variable	line:4
+operations	../rpc_server.py	/^import operations$/;"	kind:namespace	line:5
+operations.py	../operations.py	1;"	kind:file	line:1
+predict_simular	../operations.py	/^def predict_simular(vacabulary):$/;"	kind:function	line:8
 requests	../client.py	/^import requests$/;"	kind:namespace	line:4
+result	../operations.py	/^result = predict_simular('三阳')$/;"	kind:variable	line:17
 rpc_server.py	../rpc_server.py	1;"	kind:file	line:1
 run_simple	../rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2

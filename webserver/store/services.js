@@ -28,32 +28,16 @@ class Services {
     return axios.get(`${baseUrl}/admin/payments`)
   }
 
-  fetchHouses () {
-    return axios.get(`${baseUrl}/wiki/houses`)
+  fetchWords (sentence) {
+    return axios.get(`${baseUrl}/words?sentence=${sentence}`)
   }
 
-  fetchHouse (id) {
-    return axios.get(`${baseUrl}/wiki/houses/${id}`)
+  fetchQuestions (term) {
+    return axios.get(`${baseUrl}/questions?term=${term}`)
   }
 
-  fetchCharacters () {
-    return axios.get(`${baseUrl}/wiki/characters`)
-  }
-
-  fetchCharacter (id) {
-    return axios.get(`${baseUrl}/wiki/characters/${id}`)
-  }
-
-  fetchProducts () {
-    return axios.get(`${baseUrl}/api/products`)
-  }
-
-  fetchProduct (id) {
-    return axios.get(`${baseUrl}/api/products/${id}`)
-  }
-
-  fetchUserAndOrders () {
-    return axios.get(`${baseUrl}/api/user`)
+  fetchQuestion (rootId) {
+    return axios.get(`${baseUrl}/question?id=${rootId}`)
   }
 }
 

@@ -1,9 +1,8 @@
 <template>
-  <v-app light>
+  <v-app light toolbar>
     <v-navigation-drawer
       persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
+      clipped
       v-model="drawer"
       enable-resize-watcher
     >
@@ -46,7 +45,7 @@
         drawer: true,
         fixed: false,
         items: [
-          { to: '/text-mine', title: '文本分析', icon: '' },
+          { to: '/', title: '文本分析', icon: '' },
           { to: '/knowlege-graph', title: '知识图谱', icon: ''},
           { to: '/search', title: '搜索', icon: '' },
           { to: '/qa', title: '问答', icon: ''}
@@ -54,7 +53,7 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: '母婴问诊分析挖掘'
+        title: '医学问答分析'
       }
     },
     methods: {

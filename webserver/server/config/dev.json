@@ -1,5 +1,5 @@
 {
-  "db": "mongodb://localhost/nice",
+  "db": "mongodb://localhost/turing",
   "base": "http://127.0.0.1:3000",
   "SITE_ROOT_URL": "http://codingdream.ngrok.cc",
   "wechat": {

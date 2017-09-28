@@ -7,7 +7,10 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       user: null,
-      authUser: null
+      authUser: null,
+      questions: null,
+      question: null,
+      words: []
     },
     getters,
     actions,

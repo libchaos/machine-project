@@ -107,50 +107,19 @@ export default {
     return res
   },
 
-  async showProduct ({ state }, _id) {
-    if (_id === state.currentProduct._id) return
-
-    const res = await Services.fetchProduct(_id)
-    console.log(res.data)
-    state.currentProduct = res.data.data
-
+  async fetchWords ({state}, sentence) {
+    const res = await Services.fetchWords(sentence)
+    state.words = res.data.words
     return res
   },
-
-  async saveProduct ({ state, dispatch }, product) {
-    await axios.post('/api/products', product)
-
-    let res = await dispatch('fetchProducts')
-
-    return res.data.data
+  async fetchQuestions ({state}, term) {
+    const res = await Services.fetchQuestions(term)
+    state.questions = res.data.questions
+    return res
   },
-
-  async putProduct ({ state, dispatch }, product) {
-    await axios.put('/api/products', product)
-    let res = await dispatch('fetchProducts')
-
-    return res.data.data
-  },
-
-  async deleteProduct ({ state, dispatch }, product) {
-    await axios.delete(`/api/products/${product._id}`)
-    let res = await dispatch('fetchProducts')
-
-    return res.data.data
-  },
-
-  async fetchPayments ({ state }) {
-    let { data } = await Services.getPayments()
-    state.payments = data.data
-
-    return data
-  },
-
-  async fetchUserAndOrders ({ state }) {
-    const res = await Services.fetchUserAndOrders()
-
-    state.user = res.data.data
-
+  async fetchQuestion ({state}, rootId) {
+    const res = await Services.fetchQuestion(rootId)
+    state.question = res.data.question
     return res
   }
 }
