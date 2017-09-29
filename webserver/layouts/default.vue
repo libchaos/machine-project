@@ -16,7 +16,7 @@
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" @click.stop="selectedTitle(item.title)"></v-list-tile-title>
+            <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -25,6 +25,14 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>  
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
+       <v-text-field
+        label="搜索..."
+        single-line
+        append-icon="search"
+        hide-details
+        @keyup.enter="submit"
+        v-model="searchText"
+      ></v-text-field>
     </v-toolbar>
     <main>
       <v-container fluid>
@@ -38,6 +46,8 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     data () {
       return {
@@ -53,13 +63,15 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: '医学问答分析'
+        title: '问答',
+        searchText: ''
       }
     },
     methods: {
-      selectedTitle(titlea) {
-        console.log('title  ', titlea)
-        this.title = titlea
+      submit() {
+        this.$store.dispatch('fetchWords', this.searchText)
+        this.$store.dispatch('fetchQuestions', this.searchText)
+        this.$router.push('/')
       }
     }
   }

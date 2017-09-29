@@ -109,17 +109,17 @@ export default {
 
   async fetchWords ({state}, sentence) {
     const res = await Services.fetchWords(sentence)
-    state.words = res.data.words
+    state.words = res.data.data
     return res
   },
   async fetchQuestions ({state}, term) {
     const res = await Services.fetchQuestions(term)
-    state.questions = res.data.questions
+    state.questions = res.data.data
     return res
   },
   async fetchQuestion ({state}, rootId) {
     const res = await Services.fetchQuestion(rootId)
-    state.question = res.data.question
+    state.question = res.data.data
     return res
   }
 }
