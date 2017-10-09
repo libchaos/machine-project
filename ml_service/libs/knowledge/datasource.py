@@ -10,7 +10,7 @@ class MineDB:
         self.src = self.db[coll]
 
     def count(self, conditions={}):
-        return self.scr.count(conditions)
+        return self.src.count(conditions)
 
     def query(self, conditions={}, filed=None, skip=0):
         query = self.src.find(conditions) if skip == 0 else self.src.find(filter=conditions, skip=skip)

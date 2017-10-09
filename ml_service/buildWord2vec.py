@@ -5,7 +5,6 @@ import logging
 import os.path
 import sys
 import multiprocessing
-from gensim.corpora import WikiCorpus
 from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 
