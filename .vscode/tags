@@ -7,30 +7,47 @@
 ChineseAnalyzer	../ml_service/analyse/analyzer.py	/^def ChineseAnalyzer(stoplist=STOP_WORDS,minsize=1,stemfn=stem,cachesize=50000):$/;"	kind:function	line:34
 ChineseAnalyzer	../ml_service/buildSeg.py	/^from analyse.analyzer import ChineseAnalyzer$/;"	kind:namespace	line:4
 ChineseTokenizer	../ml_service/analyse/analyzer.py	/^class ChineseTokenizer(Tokenizer):$/;"	kind:class	line:18
+HashingVectorizer	../ml_service/libs/text/texthasher.py	/^from sklearn.feature_extraction.text import HashingVectorizer$/;"	kind:namespace	line:7
 InsertOne	../ml_service/libs/knowledge/datasource.py	/^from pymongo import InsertOne$/;"	kind:namespace	line:2
 JSONRPCResponseManager	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
 KMeans	../ml_service/libs/text/indent.py	/^from sklearn.cluster import KMeans$/;"	kind:namespace	line:6
 Knowledge	../ml_service/libs/knowledge/graph.py	/^class Knowledge:$/;"	kind:class	line:8
 LabelEncoder	../ml_service/libs/text/indent.py	/^from sklearn.preprocessing import LabelEncoder$/;"	kind:namespace	line:7
-LineSentence	../ml_service/buildWord2vec.py	/^from gensim.models.word2vec import LineSentence$/;"	kind:namespace	line:10
+LatentDirichletAllocation	../ml_service/libs/text/texthasher.py	/^from sklearn.decomposition import LatentDirichletAllocation$/;"	kind:namespace	line:15
+LineSentence	../ml_service/buildWord2vec.py	/^from gensim.models.word2vec import LineSentence$/;"	kind:namespace	line:9
 LowercaseFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+MineDB	../ml_service/buildKnowledge.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:9
 MineDB	../ml_service/crawlZhWiki.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:7
+MineDB	../ml_service/create_pos_patterns.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:6
 MineDB	../ml_service/libs/knowledge/datasource.py	/^class MineDB:$/;"	kind:class	line:4
 MongoClient	../ml_service/libs/knowledge/datasource.py	/^from pymongo import MongoClient$/;"	kind:namespace	line:1
+NearestCentroid	../ml_service/libs/text/texthasher.py	/^from sklearn.neighbors import NearestCentroid$/;"	kind:namespace	line:10
+Normalizer	../ml_service/libs/text/texthasher.py	/^from sklearn.preprocessing import Normalizer$/;"	kind:namespace	line:11
+PatternCapture	../ml_service/buildKnowledge.py	/^from libs.text.pos_tree import PatternCapture$/;"	kind:namespace	line:8
+PatternCapture	../ml_service/create_pos_patterns.py	/^from libs.text.pos_tree import PatternCapture$/;"	kind:namespace	line:5
 PatternCapture	../ml_service/libs/text/pos_tree.py	/^class PatternCapture:$/;"	kind:class	line:3
+PunktSentenceTokenizer	../ml_service/buildKnowledge.py	/^from nltk.tokenize.punkt import PunktSentenceTokenizer$/;"	kind:namespace	line:5
+PunktSentenceTokenizer	../ml_service/create_pos_patterns.py	/^from nltk.tokenize.punkt import PunktSentenceTokenizer$/;"	kind:namespace	line:7
 PyOrientSchemaException	../ml_service/libs/knowledge/graph.py	/^from pyorient.exception import PyOrientSchemaException$/;"	kind:namespace	line:2
 RegexAnalyzer	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
 Request	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
 Response	../backend/rpc_server.py	/^from werkzeug.wrappers import Request, Response$/;"	kind:namespace	line:1
+RidgeClassifier	../ml_service/libs/text/texthasher.py	/^from sklearn.linear_model import RidgeClassifier$/;"	kind:namespace	line:9
 STOP_WORDS	../ml_service/analyse/analyzer.py	/^STOP_WORDS = frozenset((line.rstrip() for line in codecs.open(dataPath,'r','utf-8')))$/;"	kind:variable	line:13
+ScalableBloomFilter	../ml_service/buildKnowledge.py	/^from pybloom_live import ScalableBloomFilter$/;"	kind:namespace	line:10
+SelectKBest	../ml_service/libs/text/texthasher.py	/^from sklearn.feature_selection import SelectKBest, chi2$/;"	kind:namespace	line:8
+SparsePCA	../ml_service/libs/text/texthasher.py	/^from sklearn.decomposition import SparsePCA$/;"	kind:namespace	line:13
 StemFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
 StopFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
 TextBlob	../ml_service/libs/text/structure.py	/^from textblob import TextBlob$/;"	kind:namespace	line:4
+TextStructure	../ml_service/buildKnowledge.py	/^from libs.text import structure as TextStructure$/;"	kind:namespace	line:7
+TextStructure	../ml_service/create_pos_patterns.py	/^from libs.text import structure as TextStructure$/;"	kind:namespace	line:4
+TfidfVectorizer	../ml_service/libs/text/texthasher.py	/^from sklearn.feature_extraction.text import TfidfVectorizer$/;"	kind:namespace	line:6
 Token	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
 Tokenizer	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import Tokenizer, Token$/;"	kind:namespace	line:3
+TruncatedSVD	../ml_service/libs/text/texthasher.py	/^from sklearn.decomposition import TruncatedSVD$/;"	kind:namespace	line:14
 Wiki	../ml_service/crawlZhWiki.py	/^from libs.spider import wiki as Wiki$/;"	kind:namespace	line:6
-WikiCorpus	../ml_service/buildWord2vec.py	/^from gensim.corpora import WikiCorpus$/;"	kind:namespace	line:8
-Word2Vec	../ml_service/buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:9
+Word2Vec	../ml_service/buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:8
 __call__	../ml_service/analyse/analyzer.py	/^    def __call__(self,text,**kargs):$/;"	kind:member	line:19
 __init__	../ml_service/libs/knowledge/datasource.py	/^    def __init__(self, host, db, coll):$/;"	kind:member	line:6
 __init__	../ml_service/libs/knowledge/graph.py	/^    def __init__(self, host, dbname, username, psw):$/;"	kind:member	line:10
@@ -44,80 +61,118 @@ __prepare_classes	../ml_service/libs/knowledge/graph.py	/^    def __prepare_clas
 accepted_chars	../ml_service/analyse/analyzer.py	/^accepted_chars = re.compile(r"[\\u4e00-\\u9fa5]+")$/;"	kind:variable	line:15
 add	../ml_service/libs/knowledge/graph.py	/^    def add(self, topic, words, weights, verbose):$/;"	kind:member	line:41
 add_pending	../ml_service/crawlZhWiki.py	/^def add_pending(crawl_collection, title):$/;"	kind:function	line:65
+alpha	../ml_service/libs/text/texthasher.py	/^            alpha=1,$/;"	kind:variable	line:27
 analyzer	../ml_service/buildSeg.py	/^    analyzer = ChineseAnalyzer()$/;"	kind:variable	line:11
 analyzer.py	../ml_service/analyse/analyzer.py	1;"	kind:file	line:1
 append	../ml_service/libs/text/pos_tree.py	/^    def append(self, p):$/;"	kind:member	line:17
 application	../backend/rpc_server.py	/^def application(request):$/;"	kind:function	line:13
+argparse	../ml_service/buildKnowledge.py	/^import argparse$/;"	kind:namespace	line:3
 argparse	../ml_service/crawlZhWiki.py	/^import argparse$/;"	kind:namespace	line:3
+argparse	../ml_service/create_pos_patterns.py	/^import argparse$/;"	kind:namespace	line:2
 args	../ml_service/crawlZhWiki.py	/^args = vars(arguments.parse_args(sys.argv[1:]))$/;"	kind:variable	line:14
+args	../ml_service/create_pos_patterns.py	/^args = vars(arguments.parse_args(sys.argv[1:]))$/;"	kind:variable	line:12
+arguments	../ml_service/buildKnowledge.py	/^arguments = argparse.ArgumentParser()$/;"	kind:variable	line:12
 arguments	../ml_service/crawlZhWiki.py	/^arguments = argparse.ArgumentParser()$/;"	kind:variable	line:11
+arguments	../ml_service/create_pos_patterns.py	/^arguments = argparse.ArgumentParser()$/;"	kind:variable	line:9
 asyncio	../ml_service/crawlZhWiki.py	/^import asyncio$/;"	kind:namespace	line:2
+bf	../ml_service/buildKnowledge.py	/^    bf = ScalableBloomFilter(mode=ScalableBloomFilter.SMALL_SET_GROWTH)$/;"	kind:variable	line:99
+buildKnowledge.py	../ml_service/buildKnowledge.py	1;"	kind:file	line:1
 buildSeg.py	../ml_service/buildSeg.py	1;"	kind:file	line:1
 buildWord2vec.py	../ml_service/buildWord2vec.py	1;"	kind:file	line:1
 capture	../ml_service/libs/text/pos_tree.py	/^    def capture(self, pos_sentence):$/;"	kind:member	line:23
+chi2	../ml_service/libs/text/texthasher.py	/^from sklearn.feature_selection import SelectKBest, chi2$/;"	kind:namespace	line:8
 classify	../ml_service/libs/text/indent.py	/^def classify(opr):$/;"	kind:function	line:43
 classify_us	../ml_service/libs/text/indent.py	/^    def classify_us(vectors):$/;"	kind:function	line:44
+clean	../ml_service/buildKnowledge.py	/^    def clean(a):$/;"	kind:function	line:63
 cleanse	../ml_service/libs/text/cleanser.py	/^def cleanse(txt):$/;"	kind:function	line:6
 cleanser.py	../ml_service/libs/text/cleanser.py	1;"	kind:file	line:1
 clear	../ml_service/libs/knowledge/graph.py	/^    def clear(self):$/;"	kind:member	line:35
+cli_annotate	../ml_service/create_pos_patterns.py	/^def cli_annotate(crawl_collection):$/;"	kind:function	line:35
 client.py	../backend/client.py	1;"	kind:file	line:1
 codecs	../ml_service/analyse/analyzer.py	/^import codecs$/;"	kind:namespace	line:5
+colored	../ml_service/buildKnowledge.py	/^from termcolor import colored$/;"	kind:namespace	line:4
 colored	../ml_service/crawlZhWiki.py	/^from termcolor import colored$/;"	kind:namespace	line:5
+colored	../ml_service/create_pos_patterns.py	/^from termcolor import colored$/;"	kind:namespace	line:3
 colored	../ml_service/libs/knowledge/graph.py	/^from termcolor import colored$/;"	kind:namespace	line:6
 colored	../ml_service/libs/spider/crawler.py	/^from termcolor import colored$/;"	kind:namespace	line:3
 colored	../ml_service/libs/spider/wiki.py	/^from termcolor import colored$/;"	kind:namespace	line:2
 colored	../ml_service/libs/text/indent.py	/^from termcolor import colored$/;"	kind:namespace	line:5
 colored	../ml_service/libs/text/structure.py	/^from termcolor import colored$/;"	kind:namespace	line:2
+colored	../ml_service/libs/text/texthasher.py	/^from termcolor import colored$/;"	kind:namespace	line:5
 count	../ml_service/libs/knowledge/datasource.py	/^    def count(self, conditions={}):$/;"	kind:member	line:12
 crawl	../ml_service/crawlZhWiki.py	/^def crawl(crawl_collection, title, depth, verbose):$/;"	kind:function	line:71
 crawlZhWiki.py	../ml_service/crawlZhWiki.py	1;"	kind:file	line:1
+crawl_collection	../ml_service/buildKnowledge.py	/^    crawl_collection = init_crawl_collection()$/;"	kind:variable	line:94
 crawl_collection	../ml_service/crawlZhWiki.py	/^    crawl_collection = init_crawl_collection()$/;"	kind:variable	line:96
 crawler	../ml_service/libs/spider/wiki.py	/^from . import crawler$/;"	kind:namespace	line:3
 crawler.py	../ml_service/libs/spider/crawler.py	1;"	kind:file	line:1
+create_pos_patterns.py	../ml_service/create_pos_patterns.py	1;"	kind:file	line:1
 data	../ml_service/buildSeg.py	/^    data = pandas.read_csv(dataPath('data.csv'))$/;"	kind:variable	line:10
 dataPath	../ml_service/analyse/analyzer.py	/^dataPath = os.path.join(module_path, 'stop_words.txt')$/;"	kind:variable	line:11
 dataPath	../ml_service/buildSeg.py	/^    dataPath = lambda filename: os.path.join('..\/data_process\/public', filename)$/;"	kind:variable	line:9
 datasource.py	../ml_service/libs/knowledge/datasource.py	1;"	kind:file	line:1
+decomposers	../ml_service/libs/text/texthasher.py	/^decomposers = {$/;"	kind:variable	line:18
 depth	../ml_service/crawlZhWiki.py	/^    depth = args['depth']$/;"	kind:variable	line:92
 deque	../ml_service/libs/text/pos_tree.py	/^from collections import deque$/;"	kind:namespace	line:1
 deque	../ml_service/libs/text/structure.py	/^from collections import deque$/;"	kind:namespace	line:1
 dispatcher	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
 download_page	../ml_service/libs/spider/crawler.py	/^def download_page(url, selectors, verbose=False):$/;"	kind:function	line:5
 download_wiki	../ml_service/libs/spider/wiki.py	/^def download_wiki(url, verbose=False):$/;"	kind:function	line:5
+ensure_viable	../ml_service/buildKnowledge.py	/^def ensure_viable(ns, stopwords):$/;"	kind:function	line:62
 fit	../ml_service/libs/text/indent.py	/^    def fit(vectors, labels):$/;"	kind:function	line:50
 foobar	../backend/rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
 generate	../ml_service/libs/text/structure.py	/^    def generate(t):$/;"	kind:function	line:7
 gensim	../backend/operations.py	/^import gensim$/;"	kind:namespace	line:1
 graph.py	../ml_service/libs/knowledge/graph.py	1;"	kind:file	line:1
+hash	../ml_service/libs/text/texthasher.py	/^def hash(operations, learn=False, verbose=True):$/;"	kind:function	line:66
+hash_me	../ml_service/libs/text/texthasher.py	/^    def hash_me(dataset):$/;"	kind:function	line:67
+help	../ml_service/buildKnowledge.py	/^                       help='Maximum number of topics we want to import')$/;"	kind:variable	line:21
+help	../ml_service/buildKnowledge.py	/^                       help='Starting index of the crawling record to annotate')$/;"	kind:variable	line:17
+help	../ml_service/buildKnowledge.py	/^                       help='Supply the OrientDB password for root account')$/;"	kind:variable	line:19
 htmldom	../ml_service/libs/spider/crawler.py	/^from htmldom import htmldom$/;"	kind:namespace	line:2
 indent.py	../ml_service/libs/text/indent.py	1;"	kind:file	line:1
+init_crawl_collection	../ml_service/buildKnowledge.py	/^def init_crawl_collection():$/;"	kind:function	line:24
 init_crawl_collection	../ml_service/crawlZhWiki.py	/^def init_crawl_collection():$/;"	kind:function	line:17
+init_crawl_collection	../ml_service/create_pos_patterns.py	/^def init_crawl_collection():$/;"	kind:function	line:14
 insert	../ml_service/libs/knowledge/datasource.py	/^    def insert(self, record):$/;"	kind:member	line:26
 insert_many	../ml_service/libs/knowledge/datasource.py	/^    def insert_many(self, records):$/;"	kind:member	line:29
 is_downloaded	../ml_service/crawlZhWiki.py	/^def is_downloaded(crawl_collection, title):$/;"	kind:function	line:32
+iter_topic	../ml_service/buildKnowledge.py	/^def iter_topic(crawl_collection, start):$/;"	kind:function	line:29
 jieba	../ml_service/analyse/analyzer.py	/^import jieba$/;"	kind:namespace	line:6
 join	../ml_service/libs/text/pos_tree.py	/^    def join(self, delim):$/;"	kind:member	line:20
 json	../backend/client.py	/^import json$/;"	kind:namespace	line:5
 json	../ml_service/libs/knowledge/graph.py	/^import json$/;"	kind:namespace	line:5
 json	../ml_service/libs/text/indent.py	/^import json$/;"	kind:namespace	line:4
+json	../ml_service/libs/text/texthasher.py	/^import json$/;"	kind:namespace	line:3
+kb	../ml_service/buildKnowledge.py	/^    kb = Knowledge('localhost', 'vor', 'root', args['root'])$/;"	kind:variable	line:78
 keywords_in_topic	../ml_service/libs/knowledge/graph.py	/^    def keywords_in_topic(self, topic, with_edge_count=False):$/;"	kind:member	line:85
+knowledge	../ml_service/buildKnowledge.py	/^from libs.knowledge.graph import knowledge$/;"	kind:namespace	line:6
 list_crawl_pending	../ml_service/crawlZhWiki.py	/^def list_crawl_pending(crawl_collection, max_samples):$/;"	kind:function	line:43
 load	../ml_service/libs/text/indent.py	/^def load(path):$/;"	kind:function	line:29
 load	../ml_service/libs/text/pos_tree.py	/^    def load(self, path):$/;"	kind:member	line:7
-logger	../ml_service/buildWord2vec.py	/^    logger = logging.getLogger(program)$/;"	kind:variable	line:14
+load	../ml_service/libs/text/texthasher.py	/^def load(path):$/;"	kind:function	line:51
+logger	../ml_service/buildWord2vec.py	/^    logger = logging.getLogger(program)$/;"	kind:variable	line:13
 logging	../ml_service/buildSeg.py	/^import logging$/;"	kind:namespace	line:3
 logging	../ml_service/buildWord2vec.py	/^import logging$/;"	kind:namespace	line:4
 loop	../ml_service/crawlZhWiki.py	/^    loop = asyncio.get_event_loop()$/;"	kind:variable	line:94
 main	../backend/client.py	/^def main():$/;"	kind:function	line:8
+make_pipeline	../ml_service/libs/text/texthasher.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:12
 mark_as_downloaded	../ml_service/crawlZhWiki.py	/^def mark_as_downloaded(crawl_collection, title):$/;"	kind:function	line:37
+max_iter	../ml_service/libs/text/texthasher.py	/^            max_iter=10$/;"	kind:variable	line:28
+max_iter	../ml_service/libs/text/texthasher.py	/^            max_iter=15$/;"	kind:variable	line:22
 model	../backend/operations.py	/^model = gensim.models.Word2Vec.load('..\/ml_service\/text.model')$/;"	kind:variable	line:4
-model	../ml_service/buildWord2vec.py	/^    model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5,$/;"	kind:variable	line:23
+model	../ml_service/buildWord2vec.py	/^    model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5,$/;"	kind:variable	line:22
 module_path	../ml_service/analyse/analyzer.py	/^module_path = os.path.dirname(__file__)$/;"	kind:variable	line:10
 multiprocessing	../ml_service/buildWord2vec.py	/^import multiprocessing$/;"	kind:namespace	line:7
 mycut	../ml_service/buildSeg.py	/^    mycut = lambda s: [t.text for t in analyzer(s)]$/;"	kind:variable	line:12
+n	../ml_service/buildKnowledge.py	/^    n = 0$/;"	kind:variable	line:97
+n_components	../ml_service/libs/text/texthasher.py	/^            n_components=n,$/;"	kind:variable	line:26
+n_topics	../ml_service/libs/text/texthasher.py	/^            n_topics=n,$/;"	kind:variable	line:21
 new	../ml_service/libs/text/indent.py	/^def new(intent_labels=[], method='kmeans'):$/;"	kind:function	line:10
+new	../ml_service/libs/text/texthasher.py	/^def new(n_components=None, stop_words=[], decomposition='SVD'):$/;"	kind:function	line:34
 np	../ml_service/libs/knowledge/graph.py	/^import numpy as np$/;"	kind:namespace	line:3
 np	../ml_service/libs/text/indent.py	/^import numpy as np $/;"	kind:namespace	line:1
+np	../ml_service/libs/text/texthasher.py	/^import numpy as np$/;"	kind:namespace	line:1
 operations	../backend/rpc_server.py	/^import operations$/;"	kind:namespace	line:5
 operations.py	../backend/operations.py	1;"	kind:file	line:1
 os	../ml_service/analyse/analyzer.py	/^import os$/;"	kind:namespace	line:8
@@ -125,21 +180,27 @@ os	../ml_service/buildSeg.py	/^import os$/;"	kind:namespace	line:1
 os	../ml_service/buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
 os	../ml_service/libs/knowledge/graph.py	/^import os.path$/;"	kind:namespace	line:4
 os	../ml_service/libs/text/indent.py	/^import os.path$/;"	kind:namespace	line:2
+os	../ml_service/libs/text/texthasher.py	/^import os.path$/;"	kind:namespace	line:2
 pandas	../ml_service/buildSeg.py	/^import pandas$/;"	kind:namespace	line:2
 parse	../ml_service/crawlZhWiki.py	/^import urllib.parse$/;"	kind:namespace	line:8
 path	../ml_service/buildWord2vec.py	/^import os.path$/;"	kind:namespace	line:5
 path	../ml_service/libs/knowledge/graph.py	/^import os.path$/;"	kind:namespace	line:4
 path	../ml_service/libs/text/indent.py	/^import os.path$/;"	kind:namespace	line:2
+path	../ml_service/libs/text/texthasher.py	/^import os.path$/;"	kind:namespace	line:2
+patterns	../ml_service/buildKnowledge.py	/^    patterns = PatternCapture()$/;"	kind:variable	line:83
 patterns	../ml_service/libs/text/cleanser.py	/^def patterns():$/;"	kind:function	line:12
 pendings	../ml_service/crawlZhWiki.py	/^    pendings = list_crawl_pending(crawl_collection, max_samples=32)$/;"	kind:variable	line:98
 pickle	../ml_service/libs/text/indent.py	/^import pickle$/;"	kind:namespace	line:3
+pickle	../ml_service/libs/text/texthasher.py	/^import pickle$/;"	kind:namespace	line:4
 pos_tag	../ml_service/libs/text/structure.py	/^def pos_tag(words):$/;"	kind:function	line:6
 pos_tree.py	../ml_service/libs/text/pos_tree.py	1;"	kind:file	line:1
 predict_simular	../backend/operations.py	/^def predict_simular(vacabulary):$/;"	kind:function	line:8
-program	../ml_service/buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:13
+program	../ml_service/buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:12
 pyorient	../ml_service/libs/knowledge/graph.py	/^import pyorient$/;"	kind:namespace	line:1
 query	../ml_service/libs/knowledge/datasource.py	/^    def query(self, conditions={}, filed=None, skip=0):$/;"	kind:member	line:15
+raw_records	../ml_service/create_pos_patterns.py	/^def raw_records(crawl_collection, start):$/;"	kind:function	line:19
 re	../ml_service/analyse/analyzer.py	/^import re$/;"	kind:namespace	line:7
+re	../ml_service/buildKnowledge.py	/^import re$/;"	kind:namespace	line:1
 re	../ml_service/libs/spider/wiki.py	/^import re$/;"	kind:namespace	line:1
 re	../ml_service/libs/text/cleanser.py	/^import re$/;"	kind:namespace	line:1
 reduce	../ml_service/crawlZhWiki.py	/^from functools import reduce$/;"	kind:namespace	line:4
@@ -149,15 +210,22 @@ result	../backend/operations.py	/^result = predict_simular('三阳')$/;"	kind:va
 rpc_server.py	../backend/rpc_server.py	1;"	kind:file	line:1
 run_simple	../backend/rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2
 safe_load	../ml_service/libs/text/indent.py	/^def safe_load(path):$/;"	kind:function	line:34
+safe_load	../ml_service/libs/text/texthasher.py	/^def safe_load(path, n_components, stop_words, decomposition):$/;"	kind:function	line:56
 save	../ml_service/libs/text/indent.py	/^def save(operations, path):$/;"	kind:function	line:24
 save	../ml_service/libs/text/pos_tree.py	/^    def save(self, path):$/;"	kind:member	line:11
+save	../ml_service/libs/text/texthasher.py	/^def save(operations, path):$/;"	kind:function	line:48
 save_content	../ml_service/crawlZhWiki.py	/^def save_content(crawl_collection, title, content):$/;"	kind:function	line:22
 space	../ml_service/buildSeg.py	/^    space = " "$/;"	kind:variable	line:13
 stem	../ml_service/analyse/analyzer.py	/^from whoosh.lang.porter import stem$/;"	kind:namespace	line:4
+stopwords	../ml_service/buildKnowledge.py	/^    stopwords = []$/;"	kind:variable	line:88
 structure.py	../ml_service/libs/text/structure.py	1;"	kind:file	line:1
+sys	../ml_service/buildKnowledge.py	/^import sys$/;"	kind:namespace	line:2
 sys	../ml_service/buildWord2vec.py	/^import sys$/;"	kind:namespace	line:6
 sys	../ml_service/crawlZhWiki.py	/^import sys$/;"	kind:namespace	line:1
+sys	../ml_service/create_pos_patterns.py	/^import sys$/;"	kind:namespace	line:1
+tag_with_color	../ml_service/libs/text/structure.py	/^def tag_with_color(words):$/;"	kind:function	line:16
 tasks	../ml_service/crawlZhWiki.py	/^    tasks = []$/;"	kind:variable	line:100
+texthasher.py	../ml_service/libs/text/texthasher.py	1;"	kind:file	line:1
 top_keyword	../ml_service/libs/knowledge/graph.py	/^    def top_keyword(self):$/;"	kind:member	line:74
 topics_which_have	../ml_service/libs/knowledge/graph.py	/^    def topics_which_have(self, w):$/;"	kind:member	line:94
 train	../ml_service/libs/text/indent.py	/^def train(opr):$/;"	kind:function	line:49
@@ -169,4 +237,4 @@ wiki.py	../ml_service/libs/spider/wiki.py	1;"	kind:file	line:1
 wiki_contents	../ml_service/libs/spider/wiki.py	/^def wiki_contents(page):$/;"	kind:function	line:24
 wiki_rels	../ml_service/libs/spider/wiki.py	/^def wiki_rels(page):$/;"	kind:function	line:31
 wiki_title	../ml_service/libs/spider/wiki.py	/^def wiki_title(page):$/;"	kind:function	line:21
-workers	../ml_service/buildWord2vec.py	/^            workers=multiprocessing.cpu_count())$/;"	kind:variable	line:24
+workers	../ml_service/buildWord2vec.py	/^            workers=multiprocessing.cpu_count())$/;"	kind:variable	line:23
