@@ -44,4 +44,14 @@ export class textController {
       data
     }
   }
+
+  @get('child_kd')
+  async getKD (ctx, next) {
+    const sentence = ctx.query.sentence
+    const data = await api.text.childKD(sentence)
+    ctx.body = {
+      success: true,
+      data
+    }
+  }
 }

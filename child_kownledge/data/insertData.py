@@ -3,7 +3,7 @@ from db import MineDB
 
 data = pd.read_excel(open('./child.xlsx', 'rb'), sheetname='sheet1')
 
-db = MineDB('localhost', 'care', 'childKD')
+db = MineDB('localhost', 'turing', 'childKD')
 
 
 

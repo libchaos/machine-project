@@ -8,6 +8,7 @@ ChineseAnalyzer	../ml_service/analyse/analyzer.py	/^def ChineseAnalyzer(stoplist
 ChineseAnalyzer	../ml_service/buildSeg.py	/^from analyse.analyzer import ChineseAnalyzer$/;"	kind:namespace	line:4
 ChineseTokenizer	../ml_service/analyse/analyzer.py	/^class ChineseTokenizer(Tokenizer):$/;"	kind:class	line:18
 HashingVectorizer	../ml_service/libs/text/texthasher.py	/^from sklearn.feature_extraction.text import HashingVectorizer$/;"	kind:namespace	line:7
+InsertOne	../child_kownledge/data/db.py	/^from pymongo import InsertOne$/;"	kind:namespace	line:2
 InsertOne	../ml_service/libs/knowledge/datasource.py	/^from pymongo import InsertOne$/;"	kind:namespace	line:2
 JSONRPCResponseManager	../backend/rpc_server.py	/^from jsonrpc import JSONRPCResponseManager, dispatcher$/;"	kind:namespace	line:4
 KMeans	../ml_service/libs/text/indent.py	/^from sklearn.cluster import KMeans$/;"	kind:namespace	line:6
@@ -16,10 +17,13 @@ LabelEncoder	../ml_service/libs/text/indent.py	/^from sklearn.preprocessing impo
 LatentDirichletAllocation	../ml_service/libs/text/texthasher.py	/^from sklearn.decomposition import LatentDirichletAllocation$/;"	kind:namespace	line:15
 LineSentence	../ml_service/buildWord2vec.py	/^from gensim.models.word2vec import LineSentence$/;"	kind:namespace	line:9
 LowercaseFilter	../ml_service/analyse/analyzer.py	/^from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilter$/;"	kind:namespace	line:2
+MineDB	../child_kownledge/data/db.py	/^class MineDB:$/;"	kind:class	line:4
+MineDB	../child_kownledge/data/insertData.py	/^from db import MineDB$/;"	kind:namespace	line:2
 MineDB	../ml_service/buildKnowledge.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:9
 MineDB	../ml_service/crawlZhWiki.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:7
 MineDB	../ml_service/create_pos_patterns.py	/^from libs.knowledge.datasource import MineDB$/;"	kind:namespace	line:6
 MineDB	../ml_service/libs/knowledge/datasource.py	/^class MineDB:$/;"	kind:class	line:4
+MongoClient	../child_kownledge/data/db.py	/^from pymongo import MongoClient$/;"	kind:namespace	line:1
 MongoClient	../ml_service/libs/knowledge/datasource.py	/^from pymongo import MongoClient$/;"	kind:namespace	line:1
 NearestCentroid	../ml_service/libs/text/texthasher.py	/^from sklearn.neighbors import NearestCentroid$/;"	kind:namespace	line:10
 Normalizer	../ml_service/libs/text/texthasher.py	/^from sklearn.preprocessing import Normalizer$/;"	kind:namespace	line:11
@@ -49,9 +53,13 @@ TruncatedSVD	../ml_service/libs/text/texthasher.py	/^from sklearn.decomposition 
 Wiki	../ml_service/crawlZhWiki.py	/^from libs.spider import wiki as Wiki$/;"	kind:namespace	line:6
 Word2Vec	../ml_service/buildWord2vec.py	/^from gensim.models import Word2Vec$/;"	kind:namespace	line:8
 __call__	../ml_service/analyse/analyzer.py	/^    def __call__(self,text,**kargs):$/;"	kind:member	line:19
+__init__	../child_kownledge/data/db.py	/^    def __init__(self, host, db, coll):$/;"	kind:member	line:6
 __init__	../ml_service/libs/knowledge/datasource.py	/^    def __init__(self, host, db, coll):$/;"	kind:member	line:6
 __init__	../ml_service/libs/knowledge/graph.py	/^    def __init__(self, host, dbname, username, psw):$/;"	kind:member	line:10
 __init__	../ml_service/libs/text/pos_tree.py	/^    def __init__(self):$/;"	kind:member	line:4
+__init__.py	../child_kownledge/data/__init__.py	1;"	kind:file	line:1
+__init__.py	../child_kownledge/models/__init__.py	1;"	kind:file	line:1
+__init__.py	../child_kownledge/utils/__init__.py	1;"	kind:file	line:1
 __init__.py	../ml_service/analyse/__init__.py	1;"	kind:file	line:1
 __init__.py	../ml_service/libs/knowledge/__init__.py	1;"	kind:file	line:1
 __init__.py	../ml_service/libs/spider/__init__.py	1;"	kind:file	line:1
@@ -99,6 +107,8 @@ colored	../ml_service/libs/spider/wiki.py	/^from termcolor import colored$/;"	ki
 colored	../ml_service/libs/text/indent.py	/^from termcolor import colored$/;"	kind:namespace	line:5
 colored	../ml_service/libs/text/structure.py	/^from termcolor import colored$/;"	kind:namespace	line:2
 colored	../ml_service/libs/text/texthasher.py	/^from termcolor import colored$/;"	kind:namespace	line:5
+config.py	../child_kownledge/config.py	1;"	kind:file	line:1
+count	../child_kownledge/data/db.py	/^    def count(self, conditions={}):$/;"	kind:member	line:12
 count	../ml_service/libs/knowledge/datasource.py	/^    def count(self, conditions={}):$/;"	kind:member	line:12
 crawl	../ml_service/crawlZhWiki.py	/^def crawl(crawl_collection, title, depth, verbose):$/;"	kind:function	line:71
 crawlZhWiki.py	../ml_service/crawlZhWiki.py	1;"	kind:file	line:1
@@ -107,10 +117,13 @@ crawl_collection	../ml_service/crawlZhWiki.py	/^    crawl_collection = init_craw
 crawler	../ml_service/libs/spider/wiki.py	/^from . import crawler$/;"	kind:namespace	line:3
 crawler.py	../ml_service/libs/spider/crawler.py	1;"	kind:file	line:1
 create_pos_patterns.py	../ml_service/create_pos_patterns.py	1;"	kind:file	line:1
+data	../child_kownledge/data/insertData.py	/^data = pd.read_excel(open('.\/child.xlsx', 'rb'), sheetname='sheet1')$/;"	kind:variable	line:4
 data	../ml_service/buildSeg.py	/^    data = pandas.read_csv(dataPath('data.csv'))$/;"	kind:variable	line:10
 dataPath	../ml_service/analyse/analyzer.py	/^dataPath = os.path.join(module_path, 'stop_words.txt')$/;"	kind:variable	line:11
 dataPath	../ml_service/buildSeg.py	/^    dataPath = lambda filename: os.path.join('..\/data_process\/public', filename)$/;"	kind:variable	line:9
 datasource.py	../ml_service/libs/knowledge/datasource.py	1;"	kind:file	line:1
+db	../child_kownledge/data/insertData.py	/^db = MineDB('localhost', 'care', 'childKD')$/;"	kind:variable	line:6
+db.py	../child_kownledge/data/db.py	1;"	kind:file	line:1
 decomposers	../ml_service/libs/text/texthasher.py	/^decomposers = {$/;"	kind:variable	line:18
 depth	../ml_service/crawlZhWiki.py	/^    depth = args['depth']$/;"	kind:variable	line:92
 deque	../ml_service/libs/text/pos_tree.py	/^from collections import deque$/;"	kind:namespace	line:1
@@ -134,7 +147,10 @@ indent.py	../ml_service/libs/text/indent.py	1;"	kind:file	line:1
 init_crawl_collection	../ml_service/buildKnowledge.py	/^def init_crawl_collection():$/;"	kind:function	line:24
 init_crawl_collection	../ml_service/crawlZhWiki.py	/^def init_crawl_collection():$/;"	kind:function	line:17
 init_crawl_collection	../ml_service/create_pos_patterns.py	/^def init_crawl_collection():$/;"	kind:function	line:14
+insert	../child_kownledge/data/db.py	/^    def insert(self, record):$/;"	kind:member	line:26
 insert	../ml_service/libs/knowledge/datasource.py	/^    def insert(self, record):$/;"	kind:member	line:26
+insertData.py	../child_kownledge/data/insertData.py	1;"	kind:file	line:1
+insert_many	../child_kownledge/data/db.py	/^    def insert_many(self, records):$/;"	kind:member	line:29
 insert_many	../ml_service/libs/knowledge/datasource.py	/^    def insert_many(self, records):$/;"	kind:member	line:29
 is_downloaded	../ml_service/crawlZhWiki.py	/^def is_downloaded(crawl_collection, title):$/;"	kind:function	line:32
 iter_topic	../ml_service/buildKnowledge.py	/^def iter_topic(crawl_collection, start):$/;"	kind:function	line:29
@@ -156,6 +172,7 @@ logging	../ml_service/buildSeg.py	/^import logging$/;"	kind:namespace	line:3
 logging	../ml_service/buildWord2vec.py	/^import logging$/;"	kind:namespace	line:4
 loop	../ml_service/crawlZhWiki.py	/^    loop = asyncio.get_event_loop()$/;"	kind:variable	line:94
 main	../backend/client.py	/^def main():$/;"	kind:function	line:8
+main.py	../child_kownledge/main.py	1;"	kind:file	line:1
 make_pipeline	../ml_service/libs/text/texthasher.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:12
 mark_as_downloaded	../ml_service/crawlZhWiki.py	/^def mark_as_downloaded(crawl_collection, title):$/;"	kind:function	line:37
 max_iter	../ml_service/libs/text/texthasher.py	/^            max_iter=10$/;"	kind:variable	line:28
@@ -189,14 +206,17 @@ path	../ml_service/libs/text/indent.py	/^import os.path$/;"	kind:namespace	line:
 path	../ml_service/libs/text/texthasher.py	/^import os.path$/;"	kind:namespace	line:2
 patterns	../ml_service/buildKnowledge.py	/^    patterns = PatternCapture()$/;"	kind:variable	line:83
 patterns	../ml_service/libs/text/cleanser.py	/^def patterns():$/;"	kind:function	line:12
+pd	../child_kownledge/data/insertData.py	/^import pandas as pd$/;"	kind:namespace	line:1
 pendings	../ml_service/crawlZhWiki.py	/^    pendings = list_crawl_pending(crawl_collection, max_samples=32)$/;"	kind:variable	line:98
 pickle	../ml_service/libs/text/indent.py	/^import pickle$/;"	kind:namespace	line:3
 pickle	../ml_service/libs/text/texthasher.py	/^import pickle$/;"	kind:namespace	line:4
 pos_tag	../ml_service/libs/text/structure.py	/^def pos_tag(words):$/;"	kind:function	line:6
 pos_tree.py	../ml_service/libs/text/pos_tree.py	1;"	kind:file	line:1
 predict_simular	../backend/operations.py	/^def predict_simular(vacabulary):$/;"	kind:function	line:8
+processData	../child_kownledge/data/insertData.py	/^def processData(data):$/;"	kind:function	line:10
 program	../ml_service/buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:12
 pyorient	../ml_service/libs/knowledge/graph.py	/^import pyorient$/;"	kind:namespace	line:1
+query	../child_kownledge/data/db.py	/^    def query(self, conditions={}, filed=None, skip=0):$/;"	kind:member	line:15
 query	../ml_service/libs/knowledge/datasource.py	/^    def query(self, conditions={}, filed=None, skip=0):$/;"	kind:member	line:15
 raw_records	../ml_service/create_pos_patterns.py	/^def raw_records(crawl_collection, start):$/;"	kind:function	line:19
 re	../ml_service/analyse/analyzer.py	/^import re$/;"	kind:namespace	line:7
@@ -230,6 +250,7 @@ top_keyword	../ml_service/libs/knowledge/graph.py	/^    def top_keyword(self):$/
 topics_which_have	../ml_service/libs/knowledge/graph.py	/^    def topics_which_have(self, w):$/;"	kind:member	line:94
 train	../ml_service/libs/text/indent.py	/^def train(opr):$/;"	kind:function	line:49
 unicode_literals	../ml_service/analyse/analyzer.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:1
+update	../child_kownledge/data/db.py	/^    def update(self, criteria, updater):$/;"	kind:member	line:23
 update	../ml_service/libs/knowledge/datasource.py	/^    def update(self, criteria, updater):$/;"	kind:member	line:23
 urllib	../ml_service/crawlZhWiki.py	/^import urllib.parse$/;"	kind:namespace	line:8
 urllib	../ml_service/libs/spider/crawler.py	/^import urllib.request$/;"	kind:namespace	line:1

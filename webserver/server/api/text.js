@@ -2,9 +2,12 @@ import rpc from '../rpc_client'
 import mongoose from 'mongoose'
 import nodejieba from 'nodejieba'
 import R from 'ramda'
+import util from 'util'
 
 const QuesLog = mongoose.model('tmc_inquiry_question_chat_log')
 const Log = mongoose.model('ChatLog')
+const ChildKD = mongoose.model('childKD')
+ChildKD.search = util.promisify(ChildKD.search).bind(ChildKD)
 
 async function processQues (quesLogs) {
   let groupQues = R.groupBy(item => item.question_root)(quesLogs)
@@ -37,5 +40,20 @@ export async function questions (term) {
 export async function question (id) {
   const quesLogs = await QuesLog.find({question_root: id}).exec()
   const result = processQues(quesLogs)
+  return result
+}
+
+export async function childKD (sentence) {
+  const terms = nodejieba.cut(sentence)
+  console.log(terms)
+  let result
+  result = await ChildKD.search({
+    query_string: {query: sentence}
+  }, {
+    hydrate: true,
+    hydrateWithESResults: true,
+    hydrateOptions: {select: 'symptom'}
+  })
+  console.log(result)
   return result
 }
