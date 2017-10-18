@@ -10,7 +10,9 @@ const createStore = () => {
       authUser: null,
       questions: null,
       question: null,
-      words: []
+      words: [],
+      symptoms: [],
+      symptom: null
     },
     getters,
     actions,

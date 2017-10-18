@@ -121,5 +121,15 @@ export default {
     const res = await Services.fetchQuestion(rootId)
     state.question = res.data.data
     return res
+  },
+  async fetchSymptoms ({state}, sentence) {
+    const res = await Services.fetchSymptoms(sentence)
+    state.symptoms = res.data.data
+    return res
+  },
+  async fetchSymptom ({state}, id) {
+    const res = await Services.fetchSymptom(id)
+    state.symptom = res.data.data
+    return res
   }
 }

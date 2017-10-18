@@ -45,10 +45,19 @@ export class textController {
     }
   }
 
-  @get('child_kd')
+  @get('child_kds')
   async getKD (ctx, next) {
     const sentence = ctx.query.sentence
     const data = await api.text.childKD(sentence)
+    ctx.body = {
+      success: true,
+      data
+    }
+  }
+  @get('child_kd')
+  async getKDOne (ctx, next) {
+    const id = ctx.query.id
+    const data = await api.text.childKDOne(id)
     ctx.body = {
       success: true,
       data

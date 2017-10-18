@@ -1,17 +1,18 @@
 const mongoose = require('mongoose')
 const mongoosastic = require('mongoosastic')
+const body = mongoose.Schema({
+  kd_title: {type: String},
+  content: {type: String},
+  images: {type: Array, es_type: 'string'}
+})
 const schema = mongoose.Schema({
   department: {type: String},
   category: {type: String},
-  tags: {type: Array},
-  symptom: {type: String, es_indexed: true},
+  tags: {type: Array, es_type: 'string'},
+  symptom: {type: String, es_boost: 2.0},
   symptom_img: {type: String},
   decription: {type: String},
-  kd_body: [{
-    kd_title: {type: String},
-    content: {type: String},
-    images: {type: Array}
-  }],
+  kd_body: {type: [body], es_type: 'nested'},
   meta: {
     createdAt: {
       type: Date,
@@ -35,12 +36,23 @@ schema.pre('save', function (next) {
 })
 
 schema.plugin(mongoosastic, {
-  hosts: ['localhost:9200']
+  hosts: ['localhost:9200'],
+  hydrate: true,
+  hydrateWithESResults: true,
+  hydrateOptions: {select: 'symptom'}
 })
 
 const ChildKD = mongoose.model('childKD', schema)
 
-ChildKD.createMapping(function (err, mapping) {
+ChildKD.createMapping({
+  'analyzer': {
+    'content': {
+      'type': 'text',
+      'analyzer': 'ik_smart',
+      'search_analyzer': 'ik_max_word'
+    }
+  }
+}, function (err, mapping) {
   if (err) {
     console.log('error creating mapping (you can safely ignore this)')
     console.log(err)

@@ -48,12 +48,15 @@ export async function childKD (sentence) {
   console.log(terms)
   let result
   result = await ChildKD.search({
-    query_string: {query: sentence}
-  }, {
-    hydrate: true,
-    hydrateWithESResults: true,
-    hydrateOptions: {select: 'symptom'}
+    query_string: {
+      query: sentence
+    }
   })
-  console.log(result)
+
+  return result.hits.hits
+}
+
+export async function childKDOne (id) {
+  const result = await ChildKD.findOne({_id: id}).exec()
   return result
 }

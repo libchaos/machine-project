@@ -73,6 +73,9 @@ export default {
     items() {
       let items = []
       this.words.forEach(item => {
+        if (!item) {
+          item = []
+        }
         item.forEach(item => {
           items.push({
             keyword: item[0],

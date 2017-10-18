@@ -39,6 +39,14 @@ class Services {
   fetchQuestion (rootId) {
     return axios.get(`${baseUrl}/question?id=${rootId}`)
   }
+
+  fetchSymptoms (sentence) {
+    return axios.get(`${baseUrl}/child_kds?sentence=${sentence}`)
+  }
+
+  fetchSymptom (id) {
+    return axios.get(`${baseUrl}/child_kd?id=${id}`)
+  }
 }
 
 export default new Services()

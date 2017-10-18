@@ -55,10 +55,8 @@
         drawer: true,
         fixed: false,
         items: [
-          { to: '/', title: '文本分析', icon: '' },
-          { to: '/knowlege-graph', title: '知识图谱', icon: ''},
-          { to: '/search', title: '搜索', icon: '' },
-          { to: '/qa', title: '问答', icon: ''}
+          { to: '/', title: '问题检索', icon: 'chat' },
+          { to: '/search_card', title: '知识卡片检索', icon: 'event'},
         ],
         miniVariant: false,
         right: true,
@@ -69,9 +67,21 @@
     },
     methods: {
       submit() {
-        this.$store.dispatch('fetchWords', this.searchText)
-        this.$store.dispatch('fetchQuestions', this.searchText)
-        this.$router.push('/')
+        console.log('route path: ', this.$route.path)
+        switch (this.$route.path) {
+          case '/': 
+            this.$store.dispatch('fetchWords', this.searchText)
+            this.$store.dispatch('fetchQuestions', this.searchText)
+            this.$router.push('/')
+            break
+          case '/search_card':
+            this.$store.dispatch('fetchSymptoms', this.searchText)
+            this.$router.push('/search_card')
+            break
+          default: 
+            this.$router.push('/')
+        }
+     
       }
     }
   }
