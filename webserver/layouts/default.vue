@@ -57,6 +57,7 @@
         items: [
           { to: '/', title: '问题检索', icon: 'chat' },
           { to: '/search_card', title: '知识卡片检索', icon: 'event'},
+          { to: '/knownledge', title: '知识图谱', icon: 'gavel'}
         ],
         miniVariant: false,
         right: true,

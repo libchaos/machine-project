@@ -122,7 +122,7 @@ data	../ml_service/buildSeg.py	/^    data = pandas.read_csv(dataPath('data.csv')
 dataPath	../ml_service/analyse/analyzer.py	/^dataPath = os.path.join(module_path, 'stop_words.txt')$/;"	kind:variable	line:11
 dataPath	../ml_service/buildSeg.py	/^    dataPath = lambda filename: os.path.join('..\/data_process\/public', filename)$/;"	kind:variable	line:9
 datasource.py	../ml_service/libs/knowledge/datasource.py	1;"	kind:file	line:1
-db	../child_kownledge/data/insertData.py	/^db = MineDB('localhost', 'care', 'childKD')$/;"	kind:variable	line:6
+db	../child_kownledge/data/insertData.py	/^db = MineDB('localhost', 'turing', 'childKD')$/;"	kind:variable	line:6
 db.py	../child_kownledge/data/db.py	1;"	kind:file	line:1
 decomposers	../ml_service/libs/text/texthasher.py	/^decomposers = {$/;"	kind:variable	line:18
 depth	../ml_service/crawlZhWiki.py	/^    depth = args['depth']$/;"	kind:variable	line:92
