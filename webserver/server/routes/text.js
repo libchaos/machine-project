@@ -63,4 +63,15 @@ export class textController {
       data
     }
   }
+  @get('hotwords')
+  async getHotWords (ctx, next) {
+    let {start, end} = ctx.query
+    start = new Date(start) || ''
+    end = new Date(end) || ''
+    const data = await api.text.getHotWords(start, end)
+    ctx.body = {
+      success: true,
+      data
+    }
+  }
 }

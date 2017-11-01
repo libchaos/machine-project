@@ -9,25 +9,34 @@ const fs = require('fs')
 
 async function getQuestionLogs() {
 
-  const quesLogs = await chatLog.Model.find({}).lean(true)
+  const quesLogs = await chatLog.Model.find({}).populate('doctor').lean(true)
   const sortByCreateAt = R.sortBy(R.compose(R.prop('created_at')))
   let groupQues = R.groupBy(item => item.question_root)(quesLogs)
   const result = []
   for (const key of Reflect.ownKeys(groupQues)) {
     let content = ''
     let logs = []
+    const title = groupQues[key][0].doctor.title || ''
+    const tags = groupQues[key][0].doctor.tags.join(' ').trim() || ''
+    const description = groupQues[key][0].doctor.description.trim() || ''
+    const created_at = groupQues[key][0].created_at
+
     sortByCreateAt(groupQues[key]).forEach(item => {
       content += item.content
       logs.push({from: item.from, images: item.images, content: item.content})
     })
-    let item = {root: key, content}
+    let item = {root: key, content, title, tags, description}
     let log = {root: key, logs}
 
     await newChatLog.Model.findOneAndUpdate({
       root: log.root
     }, {
       root: log.root,
-      logs: log.logs
+      title,
+      tags,
+      description,
+      logs: log.logs,
+      created_at
     }, {
       upsert: true,
       new: true,

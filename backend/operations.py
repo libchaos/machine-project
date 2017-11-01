@@ -17,4 +17,5 @@ def predict_simular(vacabulary):
 result = predict_simular('三阳')
 
 print(result)
-    
+
+

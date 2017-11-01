@@ -60,3 +60,23 @@ export async function childKDOne (id) {
   const result = await ChildKD.findOne({_id: id}).exec()
   return result
 }
+
+export async function getHotWords (start, end) {
+  let query = {}
+  if (!start || !end) {
+    query = {
+
+    }
+  } else {
+    query = {
+      created_at: {
+        $gte: start,
+        $lte: end
+      }
+    }
+  }
+  let result = await Log.find(query).exec()
+  console.log(result)
+  result = R.groupBy(item => item.tags)(result)
+  return result
+}
