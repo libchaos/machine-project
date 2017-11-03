@@ -57,7 +57,7 @@
         fixed: false,
         items: [
           { to: '/', title: '问题检索', icon: 'chat' },
-          { to: 'hotword', title: '热词统计', icon: 'info'},
+          { to: 'hotword', title: '问题推荐系统', icon: 'info'},
           { to: '/search_card', title: '知识卡片检索', icon: 'event'},
           { to: '/knownledge', title: '知识图谱', icon: 'gavel'}
         ],

@@ -136,6 +136,7 @@ fit	../ml_service/libs/text/indent.py	/^    def fit(vectors, labels):$/;"	kind:f
 foobar	../backend/rpc_server.py	/^def foobar(**kwargs):$/;"	kind:function	line:8
 generate	../ml_service/libs/text/structure.py	/^    def generate(t):$/;"	kind:function	line:7
 gensim	../backend/operations.py	/^import gensim$/;"	kind:namespace	line:1
+get_words	../backend/operations.py	/^def get_words(sentence):$/;"	kind:function	line:26
 graph.py	../ml_service/libs/knowledge/graph.py	1;"	kind:file	line:1
 hash	../ml_service/libs/text/texthasher.py	/^def hash(operations, learn=False, verbose=True):$/;"	kind:function	line:66
 hash_me	../ml_service/libs/text/texthasher.py	/^    def hash_me(dataset):$/;"	kind:function	line:67
@@ -154,6 +155,7 @@ insert_many	../child_kownledge/data/db.py	/^    def insert_many(self, records):$
 insert_many	../ml_service/libs/knowledge/datasource.py	/^    def insert_many(self, records):$/;"	kind:member	line:29
 is_downloaded	../ml_service/crawlZhWiki.py	/^def is_downloaded(crawl_collection, title):$/;"	kind:function	line:32
 iter_topic	../ml_service/buildKnowledge.py	/^def iter_topic(crawl_collection, start):$/;"	kind:function	line:29
+jieba	../backend/operations.py	/^import jieba.posseg as pseg$/;"	kind:namespace	line:2
 jieba	../ml_service/analyse/analyzer.py	/^import jieba$/;"	kind:namespace	line:6
 join	../ml_service/libs/text/pos_tree.py	/^    def join(self, delim):$/;"	kind:member	line:20
 json	../backend/client.py	/^import json$/;"	kind:namespace	line:5
@@ -177,7 +179,7 @@ make_pipeline	../ml_service/libs/text/texthasher.py	/^from sklearn.pipeline impo
 mark_as_downloaded	../ml_service/crawlZhWiki.py	/^def mark_as_downloaded(crawl_collection, title):$/;"	kind:function	line:37
 max_iter	../ml_service/libs/text/texthasher.py	/^            max_iter=10$/;"	kind:variable	line:28
 max_iter	../ml_service/libs/text/texthasher.py	/^            max_iter=15$/;"	kind:variable	line:22
-model	../backend/operations.py	/^model = gensim.models.Word2Vec.load('..\/ml_service\/text.model')$/;"	kind:variable	line:4
+model	../backend/operations.py	/^model = gensim.models.Word2Vec.load('..\/ml_service\/text.model')$/;"	kind:variable	line:5
 model	../ml_service/buildWord2vec.py	/^    model = Word2Vec(LineSentence(inp), size=400, window=5, min_count=5,$/;"	kind:variable	line:22
 module_path	../ml_service/analyse/analyzer.py	/^module_path = os.path.dirname(__file__)$/;"	kind:variable	line:10
 multiprocessing	../ml_service/buildWord2vec.py	/^import multiprocessing$/;"	kind:namespace	line:7
@@ -212,9 +214,10 @@ pickle	../ml_service/libs/text/indent.py	/^import pickle$/;"	kind:namespace	line
 pickle	../ml_service/libs/text/texthasher.py	/^import pickle$/;"	kind:namespace	line:4
 pos_tag	../ml_service/libs/text/structure.py	/^def pos_tag(words):$/;"	kind:function	line:6
 pos_tree.py	../ml_service/libs/text/pos_tree.py	1;"	kind:file	line:1
-predict_simular	../backend/operations.py	/^def predict_simular(vacabulary):$/;"	kind:function	line:8
+predict_simular	../backend/operations.py	/^def predict_simular(vacabulary):$/;"	kind:function	line:9
 processData	../child_kownledge/data/insertData.py	/^def processData(data):$/;"	kind:function	line:10
 program	../ml_service/buildWord2vec.py	/^    program = os.path.basename(sys.argv[0])$/;"	kind:variable	line:12
+pseg	../backend/operations.py	/^import jieba.posseg as pseg$/;"	kind:namespace	line:2
 pyorient	../ml_service/libs/knowledge/graph.py	/^import pyorient$/;"	kind:namespace	line:1
 query	../child_kownledge/data/db.py	/^    def query(self, conditions={}, filed=None, skip=0):$/;"	kind:member	line:15
 query	../ml_service/libs/knowledge/datasource.py	/^    def query(self, conditions={}, filed=None, skip=0):$/;"	kind:member	line:15
@@ -226,7 +229,6 @@ re	../ml_service/libs/text/cleanser.py	/^import re$/;"	kind:namespace	line:1
 reduce	../ml_service/crawlZhWiki.py	/^from functools import reduce$/;"	kind:namespace	line:4
 request	../ml_service/libs/spider/crawler.py	/^import urllib.request$/;"	kind:namespace	line:1
 requests	../backend/client.py	/^import requests$/;"	kind:namespace	line:4
-result	../backend/operations.py	/^result = predict_simular('三阳')$/;"	kind:variable	line:17
 rpc_server.py	../backend/rpc_server.py	1;"	kind:file	line:1
 run_simple	../backend/rpc_server.py	/^from werkzeug.serving import run_simple$/;"	kind:namespace	line:2
 safe_load	../ml_service/libs/text/indent.py	/^def safe_load(path):$/;"	kind:function	line:34

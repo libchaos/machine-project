@@ -15,6 +15,7 @@ def application(request):
     dispatcher["echo"] = lambda s: s
     dispatcher["add"] = lambda a, b: a + b
     dispatcher["predict_simular"] = operations.predict_simular
+    dispatcher["get_words"] = operations.get_words
 
     response = JSONRPCResponseManager.handle(
         request.data, dispatcher)

@@ -23,13 +23,16 @@ const schema = mongoose.Schema({
 }, { collection: 'tmc_inquiry_employee_doctor' });
 
 
-const Model = mongoose.model('tmc_inquiry_employee_doctor', schema);
+// const Model = mongoose.model('tmc_inquiry_employee_doctor', schema);
 
-const METHOD_INSIDE = 'INSIDE';
-const METHOD_OUTSIDE = 'OUTSIDE';
+let Model
+try {
+  Model = mongoose.model('tmc_inquiry_employee_doctor')
+} catch (error) {
+  Model = mongoose.model('tmc_inquiry_employee_doctor', schema)
+}
+
 
 module.exports = {
-  Model,
-  METHOD_INSIDE,
-  METHOD_OUTSIDE,
-};
+  Model
+}

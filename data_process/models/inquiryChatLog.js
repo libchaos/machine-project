@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const InquiryDoctor = require('./inquiryDoctor').Model
+const InquiryUser = require('./inquiryUser').Model
 const TYPE_TEXT = 'TEXT'
 
 const FROM_DOCTOR = 'DOCTOR'
@@ -8,7 +9,7 @@ const FROM_USER = 'USER'
 const schema = mongoose.Schema({
   question_root: { type: mongoose.Schema.Types.ObjectId},
   question: { type: mongoose.Schema.Types.ObjectId },
-  user: { type: mongoose.Schema.Types.ObjectId },
+  user: { type: mongoose.Schema.Types.ObjectId,  ref: InquiryUser.modelName },
   doctor: { type: mongoose.Schema.Types.ObjectId, ref: InquiryDoctor.modelName },
   type: { type: String, default: TYPE_TEXT },
   from: { type: String },

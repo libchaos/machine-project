@@ -13,8 +13,11 @@ const schema = mongoose.Schema({
     content: {type: String},
     images: {type: Array},
   }],
-  created_at: {type: Date}
-
+  created_at: {type: Date},
+  doctor: {type: String},
+  user: {type: String},
+  rating: {type: Number, default: 0},
+  comment: {type: String}
 }, { collection: 'ChatLog' });
 
 const Model = mongoose.model('ChatLog', schema);
