@@ -3,7 +3,7 @@ from whoosh.analysis import RegexAnalyzer, LowercaseFilter, StopFilter, StemFilt
 from whoosh.analysis import Tokenizer, Token
 from whoosh.lang.porter import stem
 import codecs
-import jieba
+import jieba.posseg as pseg
 import re
 import os
 
@@ -17,18 +17,16 @@ accepted_chars = re.compile(r"[\u4e00-\u9fa5]+")
 
 class ChineseTokenizer(Tokenizer):
     def __call__(self,text,**kargs):
-        words = jieba.tokenize(text,mode="search")
+        words = pseg.cut(text)
         token  = Token()
-        for (w,start_pos,stop_pos) in words:
+        for (w,flag) in words:
             if not accepted_chars.match(w):
                 if len(w)>1:
                     pass
                 else:
                     continue
             token.original = token.text = w
-            token.pos = start_pos
-            token.startchar = start_pos
-            token.endchar = stop_pos
+            token.flag = flag
             yield token
 
 def ChineseAnalyzer(stoplist=STOP_WORDS,minsize=1,stemfn=stem,cachesize=50000):
