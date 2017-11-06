@@ -1,8 +1,14 @@
 import gensim
 import jieba.posseg as pseg
+from helpler import filterPid
 
 
 model = gensim.models.Word2Vec.load('../ml_service/text.model')
+
+user = gensim.models.Word2Vec.load('../ml_service/user.model')
+
+ques = gensim.models.Word2Vec.load('../ml_service/ques.model')
+
 
 
 
@@ -12,6 +18,26 @@ def predict_simular(vacabulary):
         return result
     except: 
         return ''
+
+
+
+def predict_user(item):
+    try:
+        result = user.most_similar(positive=[item], topn=10)
+        return result
+    except:
+        return ''
+
+
+def predict_ques(item):
+    try:
+        result = ques.most_similar(positive=[item], topn=10000)
+        result = helpler.filterPid(result)
+        return result
+    except:
+        return ''
+
+
 
 
 
