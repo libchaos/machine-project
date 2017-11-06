@@ -47,6 +47,16 @@ class Services {
   fetchSymptom (id) {
     return axios.get(`${baseUrl}/child_kd?id=${id}`)
   }
+
+  fetchDoctors (sentence) {
+    return axios.post(`${baseUrl}/recommend`, {
+      sentence
+    })
+  }
+
+  fetchDoctor (name) {
+    return axios.get(`${baseUrl}/doctor?name=${name}`)
+  }
 }
 
 export default new Services()

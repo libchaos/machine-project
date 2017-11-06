@@ -2,7 +2,6 @@
 
 import re
 def filterPid(res):
-    res = str(res)
     res_pid = []
     pids = re.findall(r'(?<=\<).+?(?=\>)', res)
     for pid in pids:

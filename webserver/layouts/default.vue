@@ -57,9 +57,8 @@
         fixed: false,
         items: [
           { to: '/', title: '问题检索', icon: 'chat' },
-          { to: 'hotword', title: '问题推荐系统', icon: 'info'},
           { to: '/search_card', title: '知识卡片检索', icon: 'event'},
-          { to: '/knownledge', title: '知识图谱', icon: 'gavel'}
+          { to: '/recommender', title: '医生推荐系统', icon: 'info'},
         ],
         miniVariant: false,
         right: true,
@@ -70,7 +69,7 @@
     },
     computed: {
       show() {
-        if (this.$route.path === '/hotword') {
+        if (this.$route.path === '/recommender') {
           return false
         }
         return true

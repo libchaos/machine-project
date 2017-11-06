@@ -7,6 +7,7 @@ import util from 'util'
 const QuesLog = mongoose.model('tmc_inquiry_question_chat_log')
 const Log = mongoose.model('ChatLog')
 const ChildKD = mongoose.model('childKD')
+const Doctor = mongoose.model('tmc_inquiry_employee_doctor')
 ChildKD.search = util.promisify(ChildKD.search).bind(ChildKD)
 
 async function processQues (quesLogs) {
@@ -79,4 +80,56 @@ export async function getHotWords (start, end) {
   console.log(result)
   result = R.groupBy(item => item.tags)(result)
   return result
+}
+
+export async function getRecommend (sentence) {
+  let names = R.filter(item => ['nr', 'x'].indexOf(item.tag) > -1, nodejieba.tag(sentence))
+  names = R.map(R.prop('word'), names)
+  const items = await rpc('get_phrases', [sentence])
+  let doctors = await Log.aggregate({$group: {_id: '$doctor'}}).exec()
+  doctors = R.map(R.prop('_id'), doctors)
+  let result = []
+
+  for (const name of names) {
+    if (!name) {
+      continue
+    }
+    if (doctors.indexOf(name) > -1) {
+      let temp = await rpc('predict_user', [name])
+      temp = R.filter(name => doctors.indexOf(name) > -1, temp)
+      if (!temp) {
+        continue
+      } else {
+        result = result.concat(temp)
+      }
+    }
+  }
+
+  for (const item of items) {
+    if (!item) {
+      continue
+    }
+
+    let tempD = await rpc('predict_ques', [item])
+
+    if (!tempD) {
+      continue
+    } else {
+      result = result.concat(tempD)
+    }
+  }
+  let setDoctor = Array.from(new Set(result))
+  if (setDoctor.length >= 8) {
+    setDoctor = R.slice(0, 9, setDoctor)
+  }
+  return setDoctor
+}
+
+export async function getDoctor (name) {
+  const doctor = await Doctor.findOne({name: name}).exec()
+  if (!doctor) {
+    return ''
+  } else {
+    return doctor
+  }
 }

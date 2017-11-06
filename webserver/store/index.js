@@ -12,7 +12,9 @@ const createStore = () => {
       question: null,
       words: [],
       symptoms: [],
-      symptom: null
+      symptom: null,
+      doctors: [],
+      doctor: null
     },
     getters,
     actions,
