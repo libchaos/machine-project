@@ -9,6 +9,7 @@ __pycache__/
 ml_service/libs/*_seg
 ml_service/libs/*.model
 ml_service/libs/*.vector
+data_process/public/data.csv
 
 # C extensions
 *.so
