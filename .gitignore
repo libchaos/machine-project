@@ -6,6 +6,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+ml_service/libs/*_seg
+ml_service/libs/*.model
+ml_service/libs/*.vector
 
 # C extensions
 *.so

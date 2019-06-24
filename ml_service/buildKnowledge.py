@@ -22,7 +22,7 @@ arguments.add_argument('--limit', type=int, default=100,
 
 
 def init_crawl_collection():
-    crawl_collection = MineDB('localhost', 'care', 'crawl')
+    crawl_collection = MineDB('localhost', 'turing', 'ChatLog')
     return crawl_collection
 
 
@@ -31,8 +31,8 @@ def iter_topic(crawl_collection, start):
 
     n = 0
 
-    for wiki['content'] in crawl_collection.query({'downloaded': True}, field=None, skip=start):
-        if wiki['content'] is None or 'add_to_graph' in wiki:
+    for wiki in crawl_collection.query({}, field=None, skip=start):
+        if wiki['logs'] is None:
             continue
         m = 0
 
@@ -64,7 +64,7 @@ def ensure_viable(ns, stopwords):
         # Strip non-alphanumeric symbols (unicode symbols reserved)
         a = re.sub("[\x00-\x2F\x3A-\x40\x5B-\x60\x7B-\x7F\(\)]+", "", a)
         for s in stopwords:
-        a.replace(s, '')
+            a.replace(s, '')
         return a.strip()
     ns = set(clean(n) for n in ns)
     ns = [n for n in ns if len(n) > 2]
