@@ -30,7 +30,7 @@
     "koa-session": "^5.5.0",
     "lodash": "^4.17.4",
     "mongoosastic": "^4.3.0",
-    "mongoose": "^4.11.12",
+    "mongoose": "^5.7.5",
     "nodejieba": "^2.2.5",
     "nuxt": "^1.0.0-rc3",
     "qiniu": "^7.0.8",
