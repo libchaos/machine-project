@@ -28,7 +28,7 @@
     "koa-jwt": "^3.2.2",
     "koa-router": "^7.2.1",
     "koa-session": "^5.5.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "mongoosastic": "^4.3.0",
     "mongoose": "^4.11.12",
     "nodejieba": "^2.2.5",
