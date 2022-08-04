@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "csvjson": "^4.3.4",
-    "mongoose": "^4.11.13",
+    "mongoose": "^5.7.5",
     "ramda": "^0.24.1"
   }
 }
