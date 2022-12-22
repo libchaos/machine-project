@@ -21,7 +21,7 @@
     "formstream": "^1.1.0",
     "iview": "^2.3.2",
     "jayson": "^2.0.4",
-    "jsonwebtoken": "^8.0.1",
+    "jsonwebtoken": "^9.0.0",
     "kcors": "^2.2.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
